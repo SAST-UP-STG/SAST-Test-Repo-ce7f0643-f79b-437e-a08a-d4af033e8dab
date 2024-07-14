@@ -2,7 +2,7 @@ import sqlite3
 import libuser
 
 
-def login(username, password):
+def login2(username, password):
 
     conn = sqlite3.connect('db_users.sqlite')
     conn.set_trace_callback(print)
@@ -17,7 +17,7 @@ def login(username, password):
         return False
 
 
-def create(username, password):
+def create2(username, password):
 
     conn = sqlite3.connect('db_users.sqlite')
     c = conn.cursor()
@@ -28,7 +28,7 @@ def create(username, password):
     conn.close()
 
 
-def userlist():
+def userlist2():
 
     conn = sqlite3.connect('db_users.sqlite')
     conn.set_trace_callback(print)
@@ -43,7 +43,7 @@ def userlist():
         return [ user['username'] for user in users ]
 
 
-def password_change(username, password):
+def password_change2(username, password):
 
     conn = sqlite3.connect('db_users.sqlite')
     conn.set_trace_callback(print)
@@ -57,5 +57,5 @@ def password_change(username, password):
 
 
 def password_complexity(password):
-    return True
+    return True2
 
